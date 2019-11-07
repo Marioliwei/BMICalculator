@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewBMI"
+        android:layout_width="373dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="400dp"
+        android:gravity="center_horizontal"
+        android:text="@string/bmi_calculator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <ImageView
+        android:id="@+id/imageViewProfileImage"
+        android:layout_width="279dp"
+        android:layout_height="241dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHeight"
+        app:srcCompat="@drawable/empty" />
+
+    <TextView
+        android:id="@+id/textViewbmi"
+        android:layout_width="234dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/BMI"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewProfileImage"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/imageViewProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfileImage" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="234dp"
+        android:layout_height="31dp"
+        android:text="@string/status"
+        app:layout_constraintEnd_toEndOf="@+id/textViewbmi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewbmi"
+        app:layout_constraintTop_toBottomOf="@+id/textViewbmi" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReset"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStatus" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:onClick="resetOutput"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStatus" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="373dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="@string/weight"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBMI"
+        app:layout_constraintStart_toStartOf="@+id/textViewBMI"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBMI" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="373dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="@string/height"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWeight"
+        app:layout_constraintStart_toStartOf="@+id/editTextWeight"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
+</androidx.constraintlayout.widget.ConstraintLayout>
