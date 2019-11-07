@@ -31,15 +31,15 @@ class MainActivity : AppCompatActivity() {
         val height : Double = editTextHeight.text.toString().toDouble()
         val bmi=weight/(height*height)
 
-            textViewbmi.text = ":${bmi}"
+            textViewbmi.text = getString(R.string.BMI) + "${bmi}"
                 if (bmi < 18.5) {
-                textViewStatus.text =  ":${getString(R.string.underweight)}"
+                textViewStatus.text =  getString(R.string.status) + " ${getString(R.string.underweight)}"
                 imageViewProfileImage.setImageResource(R.drawable.under)
             } else if (bmi >= 18.5 && bmi <= 24.9) {
-                textViewStatus.text = ":${getString(R.string.normal)}"
+                textViewStatus.text = getString(R.string.status) + "${getString(R.string.normal)}"
                 imageViewProfileImage.setImageResource(R.drawable.normal)
             } else {
-                textViewStatus.text = ":${getString(R.string.overweight)}"
+                textViewStatus.text = getString(R.string.status) + "${getString(R.string.overweight)}"
                 imageViewProfileImage.setImageResource(R.drawable.over)
 
             }
